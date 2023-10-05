@@ -1,23 +1,41 @@
-export function renderAddRemoveDrinkButton(id, name, image) {
-  if (getDrink(id)) {
-    return `<button class="favourite removeFrom" data-id="${id}" data-name="${name}" data-image="${image}">Remove
-        <svg class="icon-heart-selected">
-            <use href="${icons}#heart"></use>
-        </svg>
-      </button>`;
-  }
+// import { favouritesMarkup } from './utilities/render-favorite-coctales';
+// import {
+//   favorites,
+//   COCKTAIL_ID,
+//   deleteFromLocalStorage,
+// } from './utilities/local-storage';
+// // import { refs } from './refs';
+// import { getCocktail } from './utilities/fetch-data';
 
-  return `<button class="favourite addTo" data-id="${id}" data-name="${name}" data-image="${image}">Add to
-      <svg class="icon-heart">
-        <use href="${icons}#heart"></use>
-      </svg>
-      </button>`;
-}
+// export const favoriteCoctailsList = document.querySelector('.favorite-cocktails-list');
 
-export function attachFavouritesRemoveClickEvents() {
-  let buttons = document.querySelectorAll('.favourite');
+// export const renderADrink = async id => {
+//   try {
+//     const drink = await getCocktail(id);
+//     favouritesMarkup(drink, favoriteCoctailsList);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
-  for (let button of buttons) {
-    button.onclick = favouritesRemoveClickEvent;
-  }
-}
+//взяти масив з локального сховища
+// let idsArray = JSON.parse(localStorage.getItem('favorites'));
+// if (favorites.length !== 0) {
+//   idsArray.forEach(item => {
+//     renderADrink(item);
+//     console.log(item);
+//   });
+// }
+
+// function removeIdFromLocalStorage(event) {
+//   if (event.target.classList.contains('.cocktail-rem-fav-btn')) {
+//     const btn = event.target;
+//     log
+//     const listItem = btn.closest('li');
+//     let cocktailId = listItem.dataset.id;
+//     deleteFromLocalStorage(cocktailId, favorites, COCKTAIL_ID);
+
+//   }
+// }
+
+// favoriteCoctailsList.addEventListener('click', removeIdFromLocalStorage);

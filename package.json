@@ -1,11 +1,11 @@
 {
-  "name": "drinkfusionhub",
+  "name": "drinkTest",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/drinksTest/",
+    "build": "vite build --base=/drinkTest/",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -17,7 +17,9 @@
   "dependencies": {
     "axios": "^1.5.1",
     "body-scroll-lock": "^4.0.0-beta.0",
+    "lodash.throttle": "^4.1.1",
     "modern-normalize": "^2.0.0",
+    "notiflix": "^3.2.6",
     "slim-select": "^2.6.0",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"

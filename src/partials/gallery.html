@@ -1,5 +1,63 @@
-
-<section class="gallery container">
-  <h2 class="gallery-header">Cocktails</h2>
+<section class="gallery container" id="search">
+  <h2 id="gallery" class="gallery-header">Cocktails</h2>
   <ul class="gallery-list"></ul>
+
+  <div class="container-non-photos js-container-non-photos">
+    <img
+      srcset="
+        /img/no-cocktails/no-cocktails@1x.png 1x,
+        /img/no-cocktails/no-cocktails@2x.png 2x
+      "
+      src="/img/no-cocktails/no-cocktails@1x.png"
+      alt="no-cocktails"
+      class="no-coctails-img"
+      width="234"
+      height="201"
+      loading="lazy"
+    />
+    <p class="description-no-coctails">
+      Sorry, we <span class="span-no-coctails">didn’t find</span> any cocktail
+      for you
+    </p>
+  </div>
+
+  <div class="pagination-buttons-container container">
+    <button
+      class="left-pag-btn pagination-button-item"
+      type="button"
+      id="left-pag-btn"
+      data-action="leftPag"
+    >
+      <svg
+        class="page-left-icon-container"
+        id="left-pag-btn-svg"
+        data-action="leftPag"
+      >
+        <use
+          class="page-left-icon"
+          href="/img/icons.svg#icon-arrow_left"
+          data-action="leftPag"
+        ></use>
+      </svg>
+    </button>
+    <div class="number-buttons-container"></div>
+    <button
+      class="right-pag-btn pagination-button-item"
+      type="button"
+      id="right-pag-btn"
+      data-action="rightPag"
+    >
+      <svg
+        class="page-right-icon-container"
+        id="right-pag-btn-svg"
+        data-action="rightPag"
+      >
+        <use
+          class="page-right-icon"
+          href="/img/icons.svg#icon-arrow_right"
+          data-action="rightPag"
+        ></use>
+      </svg>
+    </button>
+  </div>
 </section>

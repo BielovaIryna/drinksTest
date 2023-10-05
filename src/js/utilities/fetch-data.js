@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { didntFindCoctails } from '../no-cocktails';
 
 const BASE_URL = 'https://drinkify.b.goit.study/api/v1/';
 const RANDOM_ENDPOINT = `cocktails/?r=`;
@@ -6,6 +8,11 @@ const COCKT_SEARCH = `cocktails/search/?`;
 const COCKT_LOOKUP_ID = `cocktails/lookup/?id=`;
 const INGRED_ENDPOINT = `ingredients/`;
 const INGRED_SEARCH_NAME = `ingredients/search/?`;
+
+const contNoPhotoEl = document.querySelector('.container-non-photos');
+const titleGalleryEl = document.querySelector('.gallery-header');
+const galleryEl = document.querySelector('.gallery-list');
+const paginContainer = document.querySelector('.pagination-buttons-container');
 
 export async function fetchRandomCocktails(num) {
   const response = await fetch(`${BASE_URL}${RANDOM_ENDPOINT}${num}`);
@@ -36,7 +43,11 @@ export async function fetchCocktailByName(query) {
     const response = await axios.get(`${BASE_URL}${COCKT_SEARCH}${params}`);
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.log(error);
+    galleryEl.innerHTML = '';
+    paginContainer.classList.add('isHidden');
+    didntFindCoctails(contNoPhotoEl, titleGalleryEl);
+    Notify.failure('Oops, cocktail not found, try another one!');
   }
 }
 
@@ -49,7 +60,11 @@ export async function fetchCocktailByFirstLetter(query) {
     const response = await axios.get(`${BASE_URL}${COCKT_SEARCH}${params}`);
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.log(error);
+    galleryEl.innerHTML = '';
+    paginContainer.classList.add('isHidden');
+    didntFindCoctails(contNoPhotoEl, titleGalleryEl);
+    Notify.failure('Oops, cocktail not found, try another one!');
   }
 }
 

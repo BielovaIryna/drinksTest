@@ -3,10 +3,17 @@
 @import url('./base.css');
 @import url('./header.css');
 @import url('./hero.css');
+@import url('./no-cocktails.css');
 @import url('./interactive.css');
 @import url('./footer.css');
 @import url('./mobile-menu.css');
-@import url('./surch.css');
-@import url('./mobile-menu.css');
+@import url('./favorite.css');
+@import url('./favorite-cocktails.css');
 @import url('./gallery.css');
 @import url('./modal.css');
+@import url('./coctail-card.css');
+@import url('./ingridients.css');
+@import url('./dark-mode.css');
+@import url('./pagination.css');
+@import url('./favorite-ingredients.css');
+
